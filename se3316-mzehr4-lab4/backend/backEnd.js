@@ -142,6 +142,7 @@ function getCourseCodes(SC) {
             return content;
         }
     });
+    console.log(courseCode);
     return courseCode;
 }
 

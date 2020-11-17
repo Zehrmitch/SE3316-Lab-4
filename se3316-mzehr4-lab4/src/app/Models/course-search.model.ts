@@ -1,4 +1,4 @@
 export class CourseSearch {
     subject: String;
-    classCode: String;
+    catalog_nbr: String;
 }

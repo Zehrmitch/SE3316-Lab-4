@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { SubjectList } from './Models/subject-list.model'
+import { CourseSearch } from './Models/course-search.model'
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class RequestService {
     return this.http.get<SubjectList[]>(this.router + '/nameAndCodes');
   }
 
-  hideSubjects() {
-    document.getElementById('allSubjects').innerHTML = '';
+  courseSearch(courseCode: String): Observable<CourseSearch[]> {
+    return this.http.get<CourseSearch[]>(this.router + '/getCourseCodes/' + courseCode);
   }
 }

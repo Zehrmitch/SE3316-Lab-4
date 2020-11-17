@@ -1,1 +1,13 @@
-<p>course-search works!</p>
+<div id="courseSearch">
+    <h1>Course Search</h1>
+    <p>
+        <mat-form-field appearance="standard">
+            <mat-label>Course Name</mat-label>
+            <input type="text" matInput id="courseCodeInput" placeholder="eg. ACTURSCI" #courses name="courseInput">
+        </mat-form-field>
+        <button mat-raised-button (click)="displayCourses(courses.value)">Search</button>
+    </p>
+    <ul id="courseSearchResults">
+        <li *ngFor="let x of courseList">{{x.subject}} -- {{x.catalog_nbr}}</li>
+    </ul>	
+  </div>

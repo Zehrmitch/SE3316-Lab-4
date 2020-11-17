@@ -9,17 +9,7 @@
 <body>
   <h1>{{title}}</h1>
   <app-display-all-subjects></app-display-all-subjects>
-  <div id="courseSearch">
-    <h1>Course Search</h1>
-    <p>
-      <mat-form-field appearance="standard">
-      <mat-label>Course Name</mat-label>
-      <input matInput id="courseCodeInput" placeholder="eg. ACTURSCI">
-      </mat-form-field>
-      <button mat-raised-button (click)="courseSearch()">Search</button>
-    </p>
-    <ul id="courseSearchResults"></ul>	
-  </div>
+  <app-course-search></app-course-search>
   <div id="timetablePlanner">
     <h1>Search Timetables</h1>
     <p>
@@ -134,7 +124,7 @@
       <mat-label>Schedule to Delete</mat-label>
       <input matInput id="scheduleToDelete" placeholder="Schedule Name">
       </mat-form-field>
-      <button mat-raised-button (click)="getSubjects()">Delete Schedule</button>
+      <!-- <button mat-raised-button (click)="getSubjects()">Delete Schedule</button> -->
       <mat-form-field appearance="standard">
         <mat-label>Show Schedule</mat-label>
         <input matInput id="showScheduleCourses" placeholder="Schedule Name">
