@@ -8,12 +8,7 @@
 </head>
 <body>
   <h1>{{title}}</h1>
-  <div id="subjectList">
-    <h1>Subject List</h1>
-    <button mat-raised-button (click)="getSubjects()">Display All Subjects</button> 
-    <button mat-raised-button (click)="hideSubjects()">Hide Subjects</button>
-    <ul id="allSubjects"></ul>
-  </div>
+  <app-display-all-subjects></app-display-all-subjects>
   <div id="courseSearch">
     <h1>Course Search</h1>
     <p>
@@ -134,12 +129,20 @@
     <h1>View and Edit Existing Schedules</h1>
     <button mat-raised-button (click)="viewSchedules()">List all Schedules</button> 
     <button mat-raised-button (click)="deleteAllSchedules()">Delete all Schedules</button>
-    <p></p>
-    <input id="scheduleToDelete"type="text" placeholder="Schedule Delete Name"/>
-    <button mat-raised-button (click)="getSubjects()">Delete Schedule</button>
-    <input id="showScheduleCourses" type="text" placeholder="Show Schedule Name"/>
-    <button mat-raised-button (click)="showSchedule()">Show Schedule</button>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Schedule to Delete</mat-label>
+      <input matInput id="scheduleToDelete" placeholder="Schedule Name">
+      </mat-form-field>
+      <button mat-raised-button (click)="getSubjects()">Delete Schedule</button>
+      <mat-form-field appearance="standard">
+        <mat-label>Show Schedule</mat-label>
+        <input matInput id="showScheduleCourses" placeholder="Schedule Name">
+        </mat-form-field>
+        <button mat-raised-button (click)="showSchedule()">Show Schedule</button>
+    </p>
     <ul id="viewSchedules"></ul>
     <ul id="showSchedule"></ul>
   </div>
 </body>
+

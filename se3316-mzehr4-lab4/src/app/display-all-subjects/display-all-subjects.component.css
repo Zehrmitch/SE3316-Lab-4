@@ -1,0 +1,12 @@
+#subjectList {  
+    box-shadow: 0 0 0 2px black inset;
+    overflow:auto;
+    width: 50%; 
+    float: right; 
+    background-color: rgb(167, 237, 255); 
+    height: 400px;
+}
+
+button {
+    margin-left: 10px;
+}

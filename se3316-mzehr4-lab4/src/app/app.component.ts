@@ -29,24 +29,6 @@ export class AppComponent {
     return parent.appendChild(el);
   }
 
-  getSubjects() {
-    const ul = document.getElementById('allSubjects');
-    fetch('/api/nameAndCodes')
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        data.forEach((e) => {
-          const item = document.createElement('li');
-          item.appendChild(document.createTextNode(e.className));
-          ul.appendChild(item);
-        });
-      });
-  }
-
-  hideSubjects() {
-    document.getElementById('allSubjects').innerHTML = '';
-  }
-
   courseSearch() {
     document.getElementById('courseSearchResults').innerHTML = '';
     var inputVal = (<HTMLInputElement>(
