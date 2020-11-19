@@ -1,0 +1,21 @@
+#newSchedule {
+    overflow: auto;
+    margin-top: 20px;
+    box-shadow: 0 0 0 2px black inset;
+    width: 35%; 
+    float: left; 
+    background-color: rgb(167, 237, 255); 
+    height: 600px;
+}
+hr {
+    height: 2px;
+    fill: black;
+    border-width:0;
+    background-color:black;
+}
+ul{
+    list-style-type: none;
+}
+button {
+    margin-left: 10px;
+}

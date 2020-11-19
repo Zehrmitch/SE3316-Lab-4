@@ -6,7 +6,11 @@ import { catchError } from 'rxjs/operators';
 import { SubjectList } from './Models/subject-list.model';
 import { CourseSearch } from './Models/course-search.model';
 import { SearchTimetable } from './Models/search-timetable.model';
+import { NewTimetable } from './Models/new-timetable.model';
+import { UpdateSchedule } from './Models/update-schedule.model';
 
+const postHeader = new HttpHeaders().set("Content-Type","text/html; charset=utf-8");
+const putHeader = new HttpHeaders().set("Content-Type","application/json; charset=utf-8");
 @Injectable({
   providedIn: 'root'
 })
@@ -25,5 +29,13 @@ export class RequestService {
 
   timetableSearch(subjectCode: String, courseCode: String): Observable<SearchTimetable[]> {
     return this.http.get<SearchTimetable[]>(this.router + '/getCourseSearch/' + subjectCode + '/' + String(courseCode));
+  }
+
+  createSchedule(scheduleName: String): Observable<NewTimetable> {
+    return this.http.post<NewTimetable>(this.router + '/createSchedule/' + scheduleName, {}, {headers: postHeader});
+  }
+
+  updateSchedule(scheduleName: String, courses: {}): Observable<UpdateSchedule> {
+    return this.http.put<UpdateSchedule>(this.router + '/updateSchedule/' + scheduleName, {body: JSON.stringify(courses)}, {headers: putHeader});
   }
 }

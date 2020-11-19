@@ -9,13 +9,15 @@ import { DisplayAllSubjectsComponent } from './display-all-subjects/display-all-
 import { FormsModule } from '@angular/forms';
 import { CourseSearchComponent } from './course-search/course-search.component';
 import { SearchTimeTableComponent } from './search-time-table/search-time-table.component';
+import { CreateTimetableComponent } from './create-timetable/create-timetable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayAllSubjectsComponent,
     CourseSearchComponent,
-    SearchTimeTableComponent
+    SearchTimeTableComponent,
+    CreateTimetableComponent
   ],
   imports: [
     BrowserModule,

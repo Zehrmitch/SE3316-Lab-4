@@ -1,0 +1,90 @@
+<div id="newSchedule">
+    <h1>New Class Schedule</h1>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Schedule Name</mat-label>
+      <input matInput id="scheduleName" #scheduleName placeholder="eg. Semester One">
+      </mat-form-field>
+      <button mat-raised-button (click)="createNewSchedule(scheduleName.value)">Create Schedule</button>
+    </p>
+    <ul id="newCourse">
+        <li>{{courseList.info}}</li>
+    </ul>
+    <hr>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Schedule to Update</mat-label>
+      <input matInput id="updateScheduleName" #schedule placeholder="eg. Semester One">
+      </mat-form-field>
+      <button mat-raised-button (click)="addCourses(schedule.value)">Add/Update Courses</button>
+    </p>
+    <ul id="newTimetable">
+      <li>{{scheduleList.text}}</li>
+    </ul>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Course Code</mat-label>
+      <input matInput id="1c" placeholder="eg. 1021B">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+      <mat-label>Subject Name</mat-label>
+      <input matInput id="1n" placeholder="eg. ACTURSCI">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Course Code</mat-label>
+      <input matInput id="2c" placeholder="eg. 1021B">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+      <mat-label>Subject Name</mat-label>
+      <input matInput id="2n" placeholder="eg. ACTURSCI">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Course Code</mat-label>
+      <input matInput id="3c" placeholder="eg. 1021B">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+      <mat-label>Subject Name</mat-label>
+      <input matInput id="3n" placeholder="eg. ACTURSCI">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Course Code</mat-label>
+      <input matInput id="4c" placeholder="eg. 1021B">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+      <mat-label>Subject Name</mat-label>
+      <input matInput id="4n" placeholder="eg. ACTURSCI">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Course Code</mat-label>
+      <input matInput id="5c" placeholder="eg. 1021B">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+      <mat-label>Subject Name</mat-label>
+      <input matInput id="5n" placeholder="eg. ACTURSCI">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Course Code</mat-label>
+      <input matInput id="6c" placeholder="eg. 1021B">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+      <mat-label>Subject Name</mat-label>
+      <input matInput id="6n" placeholder="eg. ACTURSCI">
+      </mat-form-field>
+    </p>
+  </div>

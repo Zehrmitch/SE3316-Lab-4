@@ -67,12 +67,13 @@ app.listen(port, () => {
 });
 
 // Functions
-
 function updateSchedule(sName, sCourses) {
     cache.setKey(sName, sCourses);
     cache.save(true);
-    let schedule = cache.getKey(sName);
-    return schedule;
+    let output = {
+        text: 'Schedules have been updated'
+    }
+    return output;
 }
 
 function getSchedules(){
@@ -90,8 +91,10 @@ function getSchedule(sName){
 function deleteSchedule(sName) {
     cache.removeKey(sName);
     cache.save(true);
-    let scheduleDelete = "removed";
-    return scheduleDelete;
+    let output = {
+        text: 'deleted'
+    }
+    return output;
 }
 
 function deleteAllSchedules() {
@@ -101,7 +104,7 @@ function deleteAllSchedules() {
     }
     cache.save(true); //Rename
 
-     output = {
+    let output = {
         text: 'deleted'
     }
 
@@ -113,8 +116,8 @@ function createSchedule(sName) {
         cache.setKey(sName, { });
         cache.save(true);
         let schedule = cache.getKey(sName);
-        console.log(schedule);
-        return schedule;
+        let resposeToCreate = { info: 'Schedule created' };
+        return resposeToCreate;
     }
     else{
         let resposeToCreate = { info: 'Schedule already exists' };
