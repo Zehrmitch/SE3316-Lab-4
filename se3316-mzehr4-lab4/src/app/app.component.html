@@ -12,24 +12,6 @@
   <app-course-search></app-course-search>
   <app-search-time-table></app-search-time-table>
   <app-create-timetable></app-create-timetable>
-  <div id="viewAndEdit">
-    <h1>View and Edit Existing Schedules</h1>
-    <button mat-raised-button (click)="viewSchedules()">List all Schedules</button> 
-    <button mat-raised-button (click)="deleteAllSchedules()">Delete all Schedules</button>
-    <p>
-      <mat-form-field appearance="standard">
-      <mat-label>Schedule to Delete</mat-label>
-      <input matInput id="scheduleToDelete" placeholder="Schedule Name">
-      </mat-form-field>
-      <!-- <button mat-raised-button (click)="getSubjects()">Delete Schedule</button> -->
-      <mat-form-field appearance="standard">
-        <mat-label>Show Schedule</mat-label>
-        <input matInput id="showScheduleCourses" placeholder="Schedule Name">
-        </mat-form-field>
-        <button mat-raised-button (click)="showSchedule()">Show Schedule</button>
-    </p>
-    <ul id="viewSchedules"></ul>
-    <ul id="showSchedule"></ul>
-  </div>
+  <app-view-and-edit></app-view-and-edit>
 </body>
 

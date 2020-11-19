@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { CourseSearchComponent } from './course-search/course-search.component';
 import { SearchTimeTableComponent } from './search-time-table/search-time-table.component';
 import { CreateTimetableComponent } from './create-timetable/create-timetable.component';
+import { ViewAndEditComponent } from './view-and-edit/view-and-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CreateTimetableComponent } from './create-timetable/create-timetable.co
     DisplayAllSubjectsComponent,
     CourseSearchComponent,
     SearchTimeTableComponent,
-    CreateTimetableComponent
+    CreateTimetableComponent,
+    ViewAndEditComponent
   ],
   imports: [
     BrowserModule,

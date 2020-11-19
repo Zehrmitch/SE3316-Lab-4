@@ -8,6 +8,7 @@ import { CourseSearch } from './Models/course-search.model';
 import { SearchTimetable } from './Models/search-timetable.model';
 import { NewTimetable } from './Models/new-timetable.model';
 import { UpdateSchedule } from './Models/update-schedule.model';
+import { ListSchedules } from './Models/list-schedules.model';
 
 const postHeader = new HttpHeaders().set("Content-Type","text/html; charset=utf-8");
 const putHeader = new HttpHeaders().set("Content-Type","application/json; charset=utf-8");
@@ -37,5 +38,9 @@ export class RequestService {
 
   updateSchedule(scheduleName: String, courses: {}): Observable<UpdateSchedule> {
     return this.http.put<UpdateSchedule>(this.router + '/updateSchedule/' + scheduleName, {body: JSON.stringify(courses)}, {headers: putHeader});
+  }
+
+  listSchedules(): Observable<ListSchedules[]> {
+    return this.http.get<ListSchedules[]>(this.router + '/viewSchedules');
   }
 }

@@ -1,0 +1,27 @@
+#viewAndEdit {
+    overflow: auto;
+    margin-top: 20px;
+    box-shadow: 0 0 0 2px black inset;
+    width: 65%; 
+    float: right; 
+    background-color: rgb(167, 237, 255); 
+    height: 600px;
+}
+
+#showSchedule {
+    float: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    width: 50%;
+}
+
+#viewSchedules {
+    float: left;
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 40%;
+}
+
+button {
+    margin-left: 10px;
+}
