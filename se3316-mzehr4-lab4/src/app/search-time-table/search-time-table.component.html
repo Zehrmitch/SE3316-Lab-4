@@ -1,0 +1,27 @@
+<div id="timetablePlanner">
+    <h1>Search Timetables</h1>
+    <p>
+      <mat-form-field appearance="standard">
+      <mat-label>Subject</mat-label>
+      <input matInput id="timetableSubject" #subject placeholder="eg. ACTURSCI">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+      <mat-label>Course Code</mat-label>
+      <input matInput id="timetableCourseCode" #course placeholder="eg. 1021B">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+      <mat-label>Course Component</mat-label>
+      <input matInput id="timetableCourseComponent" placeholder="eg. Description">
+      </mat-form-field>
+
+      <button mat-raised-button (click)="displaySubjects(subject.value, course.value)">Search</button>
+    </p>
+    <ul id="timetableSearch">
+        <li *ngFor="let x of courses">Subject: {{x.subject}}</li>
+        <li *ngFor="let x of courses">Class Name: {{x.className}}</li>
+        <li *ngFor="let x of courses">Class Number: {{x.catalog_nbr}}</li>
+        <li *ngFor="let x of courses">Description: {{x.catalog_description}}</li>
+    </ul>
+</div>

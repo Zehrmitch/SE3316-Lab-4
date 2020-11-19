@@ -29,26 +29,6 @@ export class AppComponent {
     return parent.appendChild(el);
   }
 
-  courseSearch() {
-    document.getElementById('courseSearchResults').innerHTML = '';
-    var inputVal = (<HTMLInputElement>(
-      document.getElementById('courseCodeInput')
-    )).value;
-    inputVal = this.sanitize(inputVal);
-    const ul = document.getElementById('courseSearchResults');
-    fetch('/api/getCourseCodes/' + inputVal)
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        data.forEach((e) => {
-          const item = document.createElement('li');
-          item.appendChild(
-            document.createTextNode(e.subject + ' : ' + e.catalog_nbr)
-          );
-          ul.appendChild(item);
-        });
-      });
-  }
 
   timetableSearch() {
     document.getElementById('timetableSearch').innerHTML = '';

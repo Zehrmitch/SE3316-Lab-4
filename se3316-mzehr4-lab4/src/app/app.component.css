@@ -1,14 +1,4 @@
 
-#timetablePlanner { 
-    margin-top: 20px;   
-    box-shadow: 0 0 0 2px black inset;
-    overflow:auto;
-    width: 100%; 
-    float: left; 
-    background-color: rgb(167, 237, 255);
-    height: 400px;
-}
-
 #classSchedule {
     overflow: auto;
     margin-top: 20px;

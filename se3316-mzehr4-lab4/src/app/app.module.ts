@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { DisplayAllSubjectsComponent } from './display-all-subjects/display-all-subjects.component';
 import { FormsModule } from '@angular/forms';
 import { CourseSearchComponent } from './course-search/course-search.component';
+import { SearchTimeTableComponent } from './search-time-table/search-time-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayAllSubjectsComponent,
-    CourseSearchComponent
+    CourseSearchComponent,
+    SearchTimeTableComponent
   ],
   imports: [
     BrowserModule,

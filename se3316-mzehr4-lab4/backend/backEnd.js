@@ -25,8 +25,8 @@ router.get("/getCourseCodes/:id", function(req, res) {
 	res.send(nameAndCodesArray);
 });
 
-router.get("/getCourseSearch/:SC/:CC/:OC", function(req, res) {
-	let courseSearch = getCourseSearch(req.params.SC, req.params.CC, req.params.OC);
+router.get("/getCourseSearch/:SC/:CC", function(req, res) {
+	let courseSearch = getCourseSearch(req.params.SC, req.params.CC);
 	res.send(courseSearch);
 });
 
@@ -146,7 +146,7 @@ function getCourseCodes(SC) {
     return courseCode;
 }
 
-function getCourseSearch(SC, CC, OC) {
+function getCourseSearch(SC, CC) {
     var subjectCodes = text.filter(function (text) {
         if (SC === text.subject && String(CC) === String(text.catalog_nbr)){
             return text;

@@ -10,27 +10,7 @@
   <h1>{{title}}</h1>
   <app-display-all-subjects></app-display-all-subjects>
   <app-course-search></app-course-search>
-  <div id="timetablePlanner">
-    <h1>Search Timetables</h1>
-    <p>
-      <mat-form-field appearance="standard">
-      <mat-label>Subject</mat-label>
-      <input matInput id="timetableSubject" placeholder="eg. ACTURSCI">
-      </mat-form-field>
-
-      <mat-form-field appearance="standard">
-      <mat-label>Course Code</mat-label>
-      <input matInput id="timetableCourseCode" placeholder="eg. 1021B">
-      </mat-form-field>
-
-      <mat-form-field appearance="standard">
-      <mat-label>Course Component</mat-label>
-      <input matInput id="timetableCourseComponent" placeholder="eg. Description">
-      </mat-form-field>
-      <button mat-raised-button (click)="timetableSearch()">Search</button>
-    </p>
-    <ul id="timetableSearch"></ul>
-  </div>
+  <app-search-time-table></app-search-time-table>
   <div id="classSchedule">
     <h1>New Class Schedule</h1>
     <p>
